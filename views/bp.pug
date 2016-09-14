@@ -1,0 +1,23 @@
+extends includes/head.pug
+
+block content
+	.container
+		form(method='POST')
+			label(for='sp') Systolic Pressure:
+			.input-group
+			input#sp.form-control(type='text', name='sp', placeholder='120')
+			br
+			label(for='dp') Diastolic Pressure:
+			.input-group
+			input#dp.form-control(type='text', name='dp', placeholder='80')
+			br
+			label(for='pulse') Pulse:
+			.input-group
+			input#pulse.form-control(type='text', name='pulse', placeholder='65')
+			br
+			select#orientation.form-control(name='orientation')
+				option(value='0') none
+				option(value='1') person
+				option(value='2') person, place
+				option(value='3') person, place, time
+			button.btn.btn-primary(type='submit') Submit
